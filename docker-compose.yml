@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   app:
-    image: rico/alp-s6-test:0.1.2
+    image: craictech/alp-phpfpm-nginx:0.1.5
     volumes:
       - ./examples:/www
     ports:
