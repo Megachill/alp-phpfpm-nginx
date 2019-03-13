@@ -1,0 +1,11 @@
+version: '3.6'
+
+services:
+  example:
+    image: craictech/alp-phpfpm-nginx:0.1
+    volumes:
+      - ./examples:/www
+    ports:
+      - "80:80"
+    environment:
+      SERVER_NAME: "localhost"
