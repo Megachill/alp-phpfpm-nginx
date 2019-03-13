@@ -61,7 +61,7 @@ ENV SERVER_ROOT=/www
 # SERVER_ALIAS='www.example.com'
 
 # COPY ./supervisord.conf /supervisord.conf
-COPY ./service /service
+COPY ./service /servi
 COPY ./php-fpm-www.conf /etc/php7/php-fpm.d/www.conf
 COPY ./nginx.conf.template /nginx.conf.template
 
@@ -72,4 +72,4 @@ RUN chmod +x /run.sh
 EXPOSE 80
 WORKDIR /www
 
-CMD ["/bin/s6-svscan", "/service"]
+CMD ["/bin/s6-svscan", "/servi"]

@@ -1,11 +1,12 @@
 version: '3.6'
 
 services:
-  example:
-    image: craictech/alp-phpfpm-nginx:0.1
+  app:
+    image: rico/alp-s6-test:0.1.2
     volumes:
       - ./examples:/www
     ports:
       - "80:80"
     environment:
       SERVER_NAME: "localhost"
+      SERVER_ROOT: "/www"
