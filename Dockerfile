@@ -67,6 +67,7 @@ COPY ./nginx.conf.template /nginx.conf.template
 
 COPY ./run.sh /run.sh
 RUN chmod +x /run.sh
+RUN /run.sh
 
 # Nginx on :80
 EXPOSE 80

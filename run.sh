@@ -6,5 +6,5 @@ SERVER_NAME=${VIRTUAL_HOST:-${SERVER_NAME:-localhost}}
 
 envsubst '$SERVER_NAME $SERVER_ALIAS $SERVER_ROOT' < /nginx.conf.template > /etc/nginx/nginx.conf
 
-/bin/s6-svscan /service
+# /bin/s6-svscan /service
 
