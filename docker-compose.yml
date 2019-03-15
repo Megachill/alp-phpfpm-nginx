@@ -2,11 +2,10 @@ version: '3.6'
 
 services:
   app:
-    image: craictech/alp-phpfpm-nginx:0.1.5
+    image: craictech/alp-phpfpm-nginx:0.1.7
     volumes:
-      - ./examples:/www
+      - ../testapp:/www/
     ports:
       - "80:80"
     environment:
       SERVER_NAME: "localhost"
-      SERVER_ROOT: "/www"

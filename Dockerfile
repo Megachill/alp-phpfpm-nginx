@@ -70,7 +70,9 @@ RUN chmod +x /run.sh
 RUN /run.sh
 
 # Nginx on :80
-EXPOSE 80
+EXPOSE 80 443
 WORKDIR /www
+
+RUN chown -R www-data:www-data /www
 
 CMD ["/bin/s6-svscan", "/service"]
